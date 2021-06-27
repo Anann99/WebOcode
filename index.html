@@ -4,13 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link type="text/css" rel="stylesheet" href="style.css" />
     <link type="text/css" rel="stylesheet" href="Grid.css" />
     <title>Document</title>
   </head>
   <body>
-    <header class="header">
+    <header class="header" data-aos="fade-down">
       <input type="checkbox" id="active" />
       <label for="active" class="menu-btn"><i class="fas fa-bars"></i></label>
       <div class="wrapper">
@@ -21,6 +21,10 @@
           <li><a href="#">Login/Signup</a></li>
         </ul>
       </div>
+      <div class="logo-up">
+        <a href="#"><img src="img/icon/living-room (1).png" /></a>
+        <p>Furnitured</p>
+      </div>
       <div class="text-box">
         <h1 class="heading-primary">
           <span class="heading-main">Your Furniture.</span>
@@ -28,8 +32,8 @@
         </h1>
       </div>
     </header>
-    <section class="section-about">
-      <div class="u-center-text u-margin-bottom-big">
+    <section class="section-about" data-aos="fade-down">
+      <div class="u-center-text u-margin-bottom-medium">
         <h2 class="heading-secondary">Best Furniture To Help You</h2>
       </div>
 
@@ -51,26 +55,33 @@
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores
             nulla deserunt voluptatum nam.
           </p>
-
           <a href="#" class="btn-text">Learn more &rarr;</a>
         </div>
       </div>
     </section>
-    <section class="section-features">
+    <section class="section-features" data-aos="fade-down">
       <div class="row mg15">
         <div class="span-1-of-4 col t15">
           <div class="feature-box">
             <h3 class="heading-tertiary u-margin-bottom-small">
               Explore the world
             </h3>
-            <p class="feature-box__text"></p>
+            <p class="paragraph">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+              eleifend facilisis mi, quis rhoncus metus sagittis quis. Duis
+              bibendum massa metus, faucibus porttitor nisl sollicitudin in.
+            </p>
           </div>
         </div>
 
         <div class="span-1-of-4 col t15">
           <div class="feature-box">
             <h3 class="heading-tertiary u-margin-bottom-small">Meet nature</h3>
-            <p class="feature-box__text"></p>
+            <p class="paragraph">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+              eleifend facilisis mi, quis rhoncus metus sagittis quis. Duis
+              bibendum massa metus, faucibus porttitor nisl sollicitudin in.
+            </p>
           </div>
         </div>
 
@@ -79,22 +90,31 @@
             <h3 class="heading-tertiary u-margin-bottom-small">
               Find your way
             </h3>
-            <p class="feature-box__text"></p>
+            <p class="paragraph">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+              eleifend facilisis mi, quis rhoncus metus sagittis quis. Duis
+              bibendum massa metus, faucibus porttitor nisl sollicitudin in.
+            </p>
           </div>
         </div>
 
         <div class="span-1-of-4 col t15">
-          <div class="feature-box">
+          <div class="feature-box u-margin-bottom-medium">
             <h3 class="heading-tertiary u-margin-bottom-small">
               Live a healthier life
             </h3>
-            <p class="feature-box__text"></p>
+            <p class="paragraph">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+              eleifend facilisis mi, quis rhoncus metus sagittis quis. Duis
+              bibendum massa metus, faucibus porttitor nisl sollicitudin in.
+            </p>
           </div>
         </div>
       </div>
     </section>
     <footer class="footer">
       <div class="logo-bottom"></div>
+      <br />
       <div class="base-foot row">
         <div class="span-1-of-2 col">
           <ul class="opt">
@@ -110,7 +130,21 @@
           </div>
         </div>
       </div>
+      <a href="https://icons8.com/icon/Y4whzjEgpgTq/furniture"
+        >Furniture icon by Icons8</a
+      >
     </footer>
     <script href="script.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 2000,
+      });
+    </script>
   </body>
 </html>
