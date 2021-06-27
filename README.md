@@ -7,3 +7,5 @@ Ayush Sharma
 Anannaya Mishra
 
 
+This Project IS all About Local Furniture vendors.
+Connecting local vendors to the local buyers.

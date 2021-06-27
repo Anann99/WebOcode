@@ -583,6 +583,3 @@ input[type="checkbox"]:checked + label {
   font-style: normal;
 }
 /*contact form Ending*/
-.changer {
-  float: left;
-}
