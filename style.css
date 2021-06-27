@@ -1,11 +1,10 @@
-
 * {
   margin: 0;
   padding: 0;
 }
 body {
-  /* margin: 5px 5px; */
-  font: "Jetbrains Mono";
+  font-family: "Jetbrains Mono", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 .header {
   background-image: url(img/pics/interior.jpg);
@@ -15,11 +14,21 @@ body {
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
+  clip-path: polygon(0% 0%, 100% 0, 100% 80%, 50% 100%, 0 80%);
 }
 .heading-primary {
+  text-decoration: underline;
+  text-decoration-color: #caba9d;
+  font-size: 65px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-5%, -75%);
+  backface-visibility: hidden;
+}
+.heading-sub {
   display: block;
   text-transform: uppercase;
-  text
 }
 .heading-main {
   display: block;
@@ -32,11 +41,146 @@ body {
   left: 0;
   height: 100%;
   width: 100%;
-  background: linear-gradient(-135deg, #fff,#000)
+  background: linear-gradient(-135deg, #f24e49, #f00900);
+  clip-path: circle(25px at calc(100% - 45px) 45px);
+  transition: all 0.3s ease-in-out;
 }
-
+#active:checked ~ .wrapper {
+  clip-path: circle(75%);
+}
+.menu-btn {
+  position: absolute;
+  z-index: 2;
+  right: 20px;
+  top: 20px;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+  background: linear-gradient(-135deg, #c1adac, #c1adac);
+  transition: all 0.3s ease-in-out;
+}
+#active:checked ~ .menu-btn {
+  background: #fff;
+  color: #c1adac;
+}
+#active:checked ~ .menu-btn i:before {
+  content: "\f00d";
+}
+.wrapper ul {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  text-align: center;
+}
+.wrapper ul li {
+  margin: 15px 0;
+}
 .wrapper ul li a {
-    color: #fff;
-    text-decoration: none;
-
+  color: none;
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: 500;
+  padding: 5px 30px;
+  color: #fff;
+  position: relative;
+  line-height: 50px;
+  transition: all 0.3s ease;
+}
+.wrapper ul li a:after {
+  position: absolute;
+  content: "";
+  background: #fff;
+  width: 100%;
+  height: 50px;
+  left: 0;
+  border-radius: 50px;
+  transform: scaleY(0);
+  z-index: -1;
+  transition: transform 0.3s ease;
+}
+.wrapper ul li a:hover:after {
+  transform: scaleY(1);
+}
+.wrapper ul li a:hover {
+  color: #4158d0;
+}
+input[type="checkbox"] {
+  display: none;
+}
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  text-align: center;
+  width: 100%;
+  color: #202020;
+}
+.content .title {
+  font-size: 40px;
+  font-weight: 700;
+}
+.content p {
+  font-size: 35px;
+  font-weight: 600;
+}
+.section-about {
+  background-image: linear-gradient(#ffff, #ffff);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  margin: 15px 15px;
+}
+.section-features {
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.507),
+      rgba(70, 70, 70, 0.226)
+    ),
+    url(img/pics/hp.jpg);
+  height: 95vh;
+  width: 100vw;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  margin-top: 10px;
+  clip-path: polygon(50% 25%, 100% 0, 100% 64%, 50% 100%, 0 65%, 0 0);
+}
+.t15 {
+  color: rgb(255, 113, 113);
+  text-align: center;
+}
+.mg15 {
+  position: relative;
+}
+/*From code*/
+.feature-box {
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 1.5rem;
+  padding: 2.5rem;
+  text-align: center;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+.heading-tertiary {
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem !important;
 }
