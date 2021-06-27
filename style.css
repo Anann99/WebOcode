@@ -395,6 +395,11 @@ input[type="checkbox"] {
   text-transform: capitalizing;
 }
 
+section {
+  /* Scroll Snap */
+  scroll-snap-align: center;
+}
+
 /* Bounce To Bottom */
 .hvr-bounce-to-bottom {
   display: inline-block;
@@ -578,3 +583,6 @@ input[type="checkbox"]:checked + label {
   font-style: normal;
 }
 /*contact form Ending*/
+.changer {
+  float: left;
+}
