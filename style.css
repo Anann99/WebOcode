@@ -1,3 +1,5 @@
+/*from(#e15f41),
+    to(#e77f67)*/
 * {
   margin: 0;
   padding: 0;
@@ -21,13 +23,15 @@ body {
   color: #34495e;
   text-decoration: underline;
   text-decoration-color: #caba9d;
-  font-size: 60px;
+  font-size: 3.87vw;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-5%, -75%);
   backface-visibility: hidden;
+  z-index: -2;
 }
+
 .heading-sub {
   display: block;
   text-transform: uppercase;
@@ -54,7 +58,7 @@ body {
   position: absolute;
   z-index: 2;
   right: 20px;
-  top: 20px;
+  top: 50px;
   height: 50px;
   width: 50px;
   text-align: center;
@@ -137,11 +141,11 @@ input[type="checkbox"] {
 .section-about {
   background-color: #ffffff;
   padding-top: 10rem;
-  padding-bottom: 25rem;
+  padding-bottom: 35rem;
   margin-top: -10vh;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  clip-path: polygon(50% 20%, 100% 0, 100% 100%, 49% 100%, 0 100%, 0 0);
+  clip-path: polygon(50% 20%, 100% 0, 100% 100%, 50% 100%, 0 100%, 0 0);
 }
 .section-features {
   background-color: #ffffff;
@@ -157,7 +161,9 @@ input[type="checkbox"] {
   background-attachment: fixed;
   background-repeat: no-repeat;
   margin-top: 10px;
-  clip-path: polygon(50% 25%, 100% 0, 100% 64%, 50% 100%, 0 65%, 0 0);
+  margin-left: 0%;
+  margin-right: 0%;
+  clip-path: polygon(50% 20%, 100% 0, 100% 80%, 50% 100%, 0 80%, 0 0);
 }
 .t15 {
   text-align: center;
@@ -169,7 +175,7 @@ input[type="checkbox"] {
 /*From code*/
 .feature-box {
   background-color: rgba(255, 255, 255, 0.8);
-  font-size: 1.5rem;
+  font-size: 1.25vw;
   padding: 2.5rem;
   text-align: center;
   border-radius: 3px;
@@ -180,11 +186,6 @@ input[type="checkbox"] {
   transition: transform 0.3s;
   transition: transform 0.3s, -webkit-transform 0.3s;
   clip-path: polygon(0 15%, 20% 0, 80% 0, 100% 15%, 100% 80%, 50% 100%, 0 80%);
-}
-.heading-tertiary {
-  font-size: 1rem;
-  font-weight: 700;
-  text-transform: uppercase;
 }
 .heading-secondary {
   font-size: 2.5rem;
@@ -198,7 +199,6 @@ input[type="checkbox"] {
     from(#e15f41),
     to(#e77f67)
   );
-  margin: 0%;
   background-image: linear-gradient(to right, #e15f41, #e77f67);
   -webkit-background-clip: text;
   color: transparent;
@@ -226,9 +226,31 @@ input[type="checkbox"] {
 }
 
 .heading-tertiary {
+  text-decoration: wavy;
+  text-decoration-color: #e15f41;
+  padding: 0rem 0.5rem;
   font-size: 1.4rem;
   font-weight: 700;
   text-transform: uppercase;
+  display: inline-block;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#e15f41),
+    to(#e77f67)
+  );
+  background-image: linear-gradient(to right, #e15f41, #e77f67);
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: 0.2rem;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.heading-tertiary:hover {
+  -webkit-transform: skewY(2deg) skewX(15deg) scale(1.1);
+  transform: skewY(2deg) skewX(15deg) scale(1.1);
+  text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
 }
 
 .paragraph {
@@ -311,3 +333,248 @@ input[type="checkbox"] {
 .footer {
   background-color: #fff;
 }
+
+/*****Footer CSS**********/
+.footer {
+  background: linear-gradient(-180deg, #e77f67, #34495e);
+  color: #202020;
+  height: auto;
+  width: 100vw;
+  padding-top: 40px;
+  display: flex;
+  margin-top: -25px;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.logo-bottom {
+  font-size: 1.8rem;
+  font-weight: 400;
+  text-transform: capitalize;
+  line-height: 3rem;
+}
+
+.footer-menu {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0 3rem 0;
+}
+
+.footer-menu ul li {
+  margin: 0 10px;
+  display: Flex;
+}
+
+.footer-menu a {
+  display: Flex;
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.4s ease;
+}
+
+.footer-menu a:hover {
+  color: #202020;
+}
+
+.reginfo {
+  background: #202020;
+  color: #fff;
+  width: 100vw;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 14px;
+  word-spacing: 2px;
+  text-transform: capitalizing;
+}
+
+/* Bounce To Bottom */
+.hvr-bounce-to-bottom {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  clip-path: polygon(0 15%, 20% 0, 80% 0, 100% 15%, 100% 80%, 50% 100%, 0 80%);
+}
+.hvr-bounce-to-bottom:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #e15f41;
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+  -webkit-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+  clip-path: polygon(0 15%, 20% 0, 80% 0, 100% 15%, 100% 80%, 50% 100%, 0 80%);
+}
+.hvr-bounce-to-bottom:hover,
+.hvr-bounce-to-bottom:focus,
+.hvr-bounce-to-bottom:active {
+  clip-path: polygon(0 15%, 20% 0, 80% 0, 100% 15%, 100% 80%, 50% 100%, 0 80%);
+  color: black;
+}
+.hvr-bounce-to-bottom:hover:before,
+.hvr-bounce-to-bottom:focus:before,
+.hvr-bounce-to-bottom:active:before {
+  clip-path: polygon(0 15%, 20% 0, 80% 0, 100% 15%, 100% 80%, 50% 100%, 0 80%);
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
+  -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+  transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+}
+/*bounce back over*/
+/*Contact form*/
+.contact-form {
+  padding-top: 85px;
+}
+
+.ch1 {
+  font-size: 5rem;
+}
+
+#ch4 {
+  font-family: "Roboto", sans-serif, "arial";
+  font-weight: 400;
+  font-size: 20px;
+  color: #9b9b9b;
+  line-height: 1.5;
+}
+
+/* ///// inputs /////*/
+
+input:focus ~ label,
+textarea:focus ~ label,
+input:valid ~ label,
+textarea:valid ~ label {
+  font-size: 0.75em;
+  color: #999;
+  top: -5px;
+  -webkit-transition: all 0.225s ease;
+  transition: all 0.225s ease;
+}
+
+.styled-input {
+  float: left;
+  width: 293px;
+  margin: 1rem 0;
+  position: relative;
+  border-radius: 4px;
+}
+
+@media only screen and (max-width: 768px) {
+  .styled-input {
+    width: 100%;
+  }
+}
+
+.styled-input label {
+  color: #555;
+  padding: 1.3rem 30px 1rem 30px;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  pointer-events: none;
+}
+
+.styled-input.wide {
+  width: 650px;
+  max-width: 100%;
+}
+
+input,
+textarea {
+  padding: 30px;
+  border: 0;
+  width: 100%;
+  font-size: 1rem;
+  background-color: rgba(231, 127, 103, 0.8);
+  color: white;
+  border-radius: 4px;
+}
+
+input:focus,
+textarea:focus {
+  outline: 0;
+}
+
+input:focus ~ span,
+textarea:focus ~ span {
+  width: 100%;
+  -webkit-transition: all 0.075s ease;
+  transition: all 0.075s ease;
+}
+
+textarea {
+  width: 100%;
+  min-height: 15em;
+}
+
+.input-container {
+  width: 650px;
+  max-width: 100%;
+  margin: 20px auto 25px auto;
+}
+
+.submit-btn {
+  float: right;
+  padding: 7px 35px;
+  border-radius: 60px;
+  display: inline-block;
+  background-color: rgb(177, 95, 77);
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.06), 0 2px 10px 0 rgba(0, 0, 0, 0.07);
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  margin-bottom: 25px;
+}
+
+.submit-btn:hover {
+  transform: translateY(1px);
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1), 0 1px 1px 0 rgba(0, 0, 0, 0.09);
+}
+
+@media (max-width: 768px) {
+  .submit-btn {
+    width: 100%;
+    float: none;
+    text-align: center;
+  }
+}
+
+input[type="checkbox"] + label {
+  color: #ccc;
+  font-style: italic;
+}
+
+input[type="checkbox"]:checked + label {
+  color: #f00;
+  font-style: normal;
+}
+/*contact form Ending*/
